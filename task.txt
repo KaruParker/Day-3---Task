@@ -1,0 +1,174 @@
+// Question.No-1
+// For the given json iterate over all for loops (for, for in, for of, forEach)
+<<(I)The For loop:->>
+The plain for loop in JavaScript is old. It already existed. This for loop logs the index and value of each element of arr:
+Syntax: for (var i=0;i<someArray.length;i++) {
+        console.log(x.someArray[i]);
+        }
+For loop example:
+var a = [
+{
+    "Name" : "Apple",
+    "Vitamin" : "C" },
+{
+    "Name" : "Banana",
+    "Vitamin" : "B6"},
+{
+    "Name" : "Mango",
+    "Vitamin" : "A"}
+];
+for (var i=0; i<a.length; i++) {
+  console.log(a[i]);
+}
+-------------------------------------------
+<<(II)The For-in loop:->>
+The for-in loop is as old as the for loop. It also already existed. This for-in loop logs the keys of arr:
+Syntax: for (var key in someArray) {
+        console.log(key);
+        }
+For-in loop example:
+var a = [
+{
+    "Name" : "Apple",
+    "Vitamin" : "C" },
+{
+    "Name" : "Banana",
+    "Vitamin" : "B6"},
+{
+    "Name" : "Mango",
+    "Vitamin" : "A"}
+];
+for (var Name in a) {
+  console.log(Name);
+}
+----------------------------------------------
+<<(III)The For-of loop:->>
+The For-of loop iterates over array elements and objects. It also already existed. This for-of loop logs the index and value of each element of arr:
+Syntax: for (var element of someArray) {
+        console.log(element);
+        }
+For-of loop example:
+var a = [
+{
+    "Name" : "Apple",
+    "Vitamin" : "C" },
+{
+    "Name" : "Banana",
+    "Vitamin" : "B6"},
+{
+    "Name" : "Mango",
+    "Vitamin" : "A"}
+];
+for (var Vitamin of a) {
+  console.log(Vitamin.Name);
+}
+-----------------------------------------------
+<<(IV)The ForEach loop:->>
+Given that neither for nor for-in are particularly well suited for looping over Arrays, a helper method was introduced and that was forEach loop.
+Syntax: someArray.forEach((elem, index)=>{
+        console.log(elem, index);
+        });
+ForEach loop example:
+var a = [
+{
+    "Name" : "Apple",
+    "Vitamin" : "C" },
+{
+    "Name" : "Banana",
+    "Vitamin" : "B6"},
+{
+    "Name" : "Mango",
+    "Vitamin" : "A"}
+];
+a.forEach((data,index) =>{
+    console.log(data,"-->"+index);
+});
+
+*********************************************************************************************************************************
+
+// Question.No-2
+// Create your own resume data in JSON format
+var myResume = [ "*** RESUME ***",
+{
+    "1) Bio":
+    {
+        "Name":"Karunya Rameshkumar",
+        "E-mail":"karunya@gmail.com",
+        "Phone":"9876543210",
+        "Designation":"Fresher"
+    },
+    "2) Address": 
+    {"Street":"13, xyz Street", 
+        "City":"Madurai", 
+        "State":"Tamil Nadu",
+        "Postal code":"610 002",
+        "Country":"India"
+    },
+    "3) Qualification":
+    {"SSLC":"KGHSS - State Board, Madurai",
+     "HSC":"KGHSS - State Board, Madurai",
+     "UG":"JCTCET - University, Chennai"
+    },
+    "4) Profile links":
+    {"LinkedIn":"www.linkedin.com",
+     "Indeed":"www.indeed.com",
+     "GitHub":"www.github.in"
+    },
+    "5) Work Experience":
+    {"Online Tutor":"Focus Edumatics.Pvt.Ltd, Coimbatore - 2 years",
+     "Clerk":"Shiva Systems, Madurai - 1 year" 
+    },
+    "6) Languages Known":
+    {"Tamil":"Read, Write, Speak - Excellent",
+     "English":"Read, Write, Speak - Good"
+    },
+    "7) Projects":
+    {"UG":"An IOT based Manhole Monitoring System",
+     "Internship":"GSM based Weather Reporting System"
+    },
+    "Declaration":"I declare that the information above is true and Correct."
+}];
+console.log(myResume);
+
+*************************************************************************************************************************************************
+
+// Question.No-3
+// Read about the difference between window, document and screen in javaScript
+Window:-
+----------
+The JavaScript window object sits at the top of the JavaScript Object hierarchy and represents the browser window. 
+The window object is supported by all browsers. All global JavaScript objects , functions, and variables automatically 
+become members of the window object. The window is the first thing that gets loaded into the browser. 
+This window object has the majority of the properties like length, innerWidth, innerHeight, name, if it has been 
+closed, its parents, and more.
+The window object represents the current browsing context . It holds things like window.location, window.history, 
+window.screen, window.status, or the window.document . Each browser tab has its own top-level window object. 
+Each of these windows gets its own separate global object. window.window always refers to window, but window.parent 
+and window.top might refer to enclosing windows, giving access to other execution contexts. Moreover, the window 
+property of a window object points to the window object itself. So the following statements all return the same 
+window object: window.window
+
+Document:-
+-----------
+The Document interface represents any web page loaded in the browser and serves as an entry point into the web 
+page's content, which is the DOM tree. When an HTML document is loaded into a web browser , it becomes a 
+document object. It is the root node of the HTML document. The document actually gets loaded inside the window 
+object and has properties available to it like title, URL, cookie, etc. HTML documents, served with the 
+"text/html" content type, also implement the HTMLDocument interface, whereas XML and SVG documents implement 
+the XMLDocument interface.
+
+Screen:-
+----------
+Screen is a small information object about physical screen dimensions . It can be used to display screen width, 
+height, colorDepth, pixelDepth etc. It is not mandatory to write window prefix with screen object. It can be 
+written without window prefix.
+Properties:-
+------------
+screen.width
+screen.height
+screen.availWidth
+screen.availHeight
+screen.colorDepth
+screen.pixelDepth
+
+********************************************************************************************************************************************************************************************************
